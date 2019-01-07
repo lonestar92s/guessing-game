@@ -4,7 +4,7 @@
 //random number function
 
 let randomNumber = function() {
-    
+
     return Math.floor(Math.random() * 5) + 1
 
 }
@@ -14,24 +14,11 @@ let x = randomNumber()
 //random number button
 
 $("#new-random").click(function() {
-	x = randomNumber()
+    x = randomNumber()
     $('.random-number').replaceWith('<h1 class="random-number">' + x + '</h1>')
 });
 
-//guess button
 
-$('#add-guess-button').click(function(){
-	let guess = $('#add-guess-input').val()
-	if(guess === ""){
-		alert("Guess cannot be blank")
-	}else
-	console.log(guess)
-	let p1Guess = $('<div id="p1guess">' + guess + '</div>')
-	
-	$("#add-guess-input").val("")
-	$("#p1guess").append(p1Guess)
-
-})
 
 
 
@@ -55,3 +42,25 @@ let player2 = new Players("Player 2")
 
 //game function
 
+//guess button
+
+$('#add-guess-button').click(function() {
+    let guess = $('#add-guess-input').val()
+    console.log(guess)
+    let p1Guess = $('<div id="p1guess">' + guess + '</div>')
+	$("#add-guess-input").val("")
+    $("#p1guess").append(p1Guess);
+    
+    console.log("Guess", guess, typeof guess)
+    console.log("Random number", x, typeof x)
+
+    if(Number(guess) === x){
+        alert("Match")
+        player1.score += 1
+    }else
+    alert("Try again")
+    
+    
+    
+
+})
