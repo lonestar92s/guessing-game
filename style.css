@@ -1,0 +1,9 @@
+header{
+	text-align: center;
+}
+
+.guess-submit{
+	position: relative;
+	top: 400px;
+	left: 100px;
+}
