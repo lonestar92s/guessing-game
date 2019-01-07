@@ -1,9 +1,19 @@
-header{
+.center{
 	text-align: center;
 }
 
 .guess-submit{
 	position: relative;
 	top: 400px;
-	left: 100px;
+	left: 300px;
+}
+
+footer{
+	text-align: center;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	
+	background-color: yellow;
 }

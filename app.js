@@ -37,15 +37,18 @@ class Players {
     }
 }
 
-let player1 = new Players("Player 1")
-let player2 = new Players("Player 2")
+let player = new Players("Player 1")
+// let player2 = new Players("Player 2")
 
 //game function
 
 //guess button
 
 $('#add-guess-button').click(function() {
-    let guess = 'You guessed ' + $('#add-guess-input').val() 
+    let guess = $('#add-guess-input').val()
+    let correct = "Correct!"
+    let tooLow = "Too low!"
+    let tooHigh = "Too High"
     console.log(guess)
     let p1Guess = $('<div id="p1guess">' + guess + '</div>')
     $("#add-guess-input").val("")
@@ -55,20 +58,23 @@ $('#add-guess-button').click(function() {
     // console.log("Random number", x, typeof x)
 
     if (Number(guess) === x) {
-        alert("Match")
-        location.reload()
+        $(".status").append("Match!")
+        // location.reload()
+    } else if (Number(guess) <= x) {
+        $("#p1guess").append(tooLow)
+        player.remainingGuesses -= 1
+    } else if (Number(guess) >= x) {
+        $("#p1guess").append(tooHigh)
+        player.remainingGuesses -= 1;
 
-    } else {
-        (Number(guess) !== x)
-        alert("Try Again")
-        player1.remainingGuesses -= 1;
-    };
 
+    }
 
-    if (player1.remainingGuesses <= 0) {
-        alert("Game over")
+    if (player.remainingGuesses <= 0) {
+        alert("Game Over")
         location.reload()
     }
+
 
 
 })
