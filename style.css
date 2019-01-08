@@ -1,19 +1,60 @@
-.center{
-	text-align: center;
+#title-border{
+	border-bottom: solid black;
 }
 
-.guess-submit{
-	position: relative;
-	top: 400px;
-	left: 300px;
+.center {
+    text-align: center;
+}
+h1{
+	font-family: Optima;
+}
+.guess-submit {
+    position: relative;
+    top: 100px;
+    left: 0px;
+    font-family: Optima;
+
+}
+button{
+ font-family: Optima;
+ font-size: 20px;
+ cursor: pointer;
 }
 
-footer{
-	text-align: center;
-	position: fixed;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	
-	background-color: yellow;
+button:hover{
+	background-color: black;
+	color: white;
+
 }
+#new-game {
+    position: relative;
+    right: 650px;
+    max-width: 867px;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 30px;
+    font-size: 25px;
+    background-color: #FFFFE0;
+    font-family: "Brush Script MT", cursive;
+    border-top: solid black;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+
+    
+}
+
+img{
+	max-width: 75px;
+}
+
+   
+
+

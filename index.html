@@ -2,21 +2,26 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Guessing Game</title>
 </head>
 
 <body>
-    <header class="center"><h1>Guessing Game</h1>
+    <!-- <embed src="jeopardy.mp3" autostart="true" loop="loop" width="2" height="0">
+    </embed> -->
+    <header class="center" id="title-border"><h1>Guessing Game<div><button id="new-game">New Game</button><br/><a><button id="next-round">Next Round</button></a></div> </h1>
     </header>
-    <h2 class="center">I am thinking of a number between 1 and 10. Can you guess it?</h2>
-    <div class="status">Status: </div>
-    <!-- <div><button id="new-random">Random</button></div> -->
+
+    <h2 class="center">I am thinking of a number between 1 and 100. Can you guess it?</h2>
+    <h3><img src="https://openclipart.org/download/257462/Checkmark.svg"></h3>
+    <div class="status">Score: <a class="scoreboard">0</a></div><br/>
+    <div class="youWin"></div>
     <div class="guess-submit">
         <span>Player 1</span>
         <input type="text" id="add-guess-input">
         <button type="button" id="add-guess-button">Submit Guess</button>
-        <div id="p1guess">Your Guesses:</div>
+        <ol id="p1guess">Your Guesses:</ol>
     </div>
     <footer>This is a game by Andrew Aluko</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
