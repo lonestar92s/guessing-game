@@ -4,53 +4,47 @@ $(document).ready(function() {
 
     $("#correct").hide();
     $('#next-round').hide();
+    //reset funcion
+    // let resetGame = function() {
+
+    //     $("#p1guess").empty()
+    //     $(".youWin").empty()
+    //     $("#correct").hide();
+    //     $("#number-selection").replaceWith('<h2 class="center" id="number-selection">Now I am thinking of a number between 1 and 100. Can you guess it?<div><button id="new-game" class="btn btn-primary">New Game</button><br/><button id="next-round" class="btn btn-primary">Next Round</button></div></h2>')
 
 
-    //random number function
+    // }
+
+    //This will generate a random number between 1 and 100
+
 
     let easyRandomNumber = function() {
 
-        return Math.floor(Math.random() * 10) + 1
+        return Math.floor(Math.random() * 100) + 1
 
     }
 
     let x = easyRandomNumber()
     console.log(x)
 
-    let mediumRandomNumber = function() {
-        return Math.floor(Math.random() * 100) + 1
-    }
-    let y = mediumRandomNumber()
+    
 
 
 
-
-    // $("#new-random").click(function() {
-    //     x = randomNumber()
-    //     $('.random-number').replaceWith('<h1 class="random-number">' + x + '</h1>')
-    // });
-
-
-
-
-
-
-    class Players {
+	class Players {
         constructor(name) {
             this.name = name;
             this.score = 0;
-            this.remainingGuesses = 5;
+            this.remainingGuesses = 10;
 
         }
-        playerGuess() {
-            this.remainingGuesses -= 1
-        }
+
     }
 
     let player = new Players("Player 1")
     // let player2 = new Players("Player 2")
 
-    //new game button
+    //This reloads the game
     $('#new-game').click(function() {
         location.reload()
     });
@@ -74,7 +68,7 @@ $(document).ready(function() {
         console.log(guess)
         let p1Guess = $('<div id="p1guess">' + guess + '</div>')
         $("#add-guess-input").val("")
-        //$("#p1guess").append(p1Guess);
+
         //scoreboard
 
 
@@ -84,9 +78,9 @@ $(document).ready(function() {
             $(".scoreboard").replaceWith('<a class="scoreboard">' + player.score + '</a>')
             $(".youWin").append("My number was " + guess + ", you win!")
             $("#p1guess").append('<li>' + youMatched + '</li>')
-            
+
             $("#correct").show();
-            $("#next-round").show();
+            // $("#next-round").show();
         } else if (Number(guess) <= x) {
             $("#p1guess").append('<li>' + tooLow, guess + '</li>')
             player.remainingGuesses -= 1
@@ -97,7 +91,7 @@ $(document).ready(function() {
 
         }
 
-        if (player.remainingGuesses <= 0) {
+        if (player.remainingGuesses === 0) {
             alert("Game Over")
             location.reload()
         }
@@ -111,15 +105,3 @@ $(document).ready(function() {
 
 
 });
-
-
-//reset funcion
-let resetGame = function() {
-
-    $("#p1guess").empty()
-    $(".youWin").empty()
-    $("#correct").hide();
-    $("#number-selection").replaceWith('<h2 class="center">Now I am thinking of a number between 1 and 100. Can you guess it?</h2>')
-
-
-}

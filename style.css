@@ -29,7 +29,7 @@ h1{
 
 #new-game {
     text-align: center;
-    position: relative;
+    bottom: 100px;
     
   
     cursor: pointer;
@@ -76,5 +76,6 @@ h3{
    
 #p1guess{
 	text-align: center;
+	list-style-position: inside;
 }
 
