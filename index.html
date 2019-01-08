@@ -10,22 +10,26 @@
 <body>
     <!-- <embed src="jeopardy.mp3" autostart="true" loop="loop" width="2" height="0">
     </embed> -->
-    <header class="center" id="title-border"><h1>Guessing Game<div><button id="new-game">New Game</button><br/><a><button id="next-round">Next Round</button></a></div> </h1>
+    <header class="center" id="title-border"><h1>Guessing Game</h1>
     </header>
-
-    <h2 class="center">I am thinking of a number between 1 and 100. Can you guess it?</h2>
-    <h3><img src="https://openclipart.org/download/257462/Checkmark.svg"></h3>
-    <div class="status">Score: <a class="scoreboard">0</a></div><br/>
-    <div class="youWin"></div>
+    <h2 class="center" id="number-selection">I am thinking of a number between 1 and 10. Can you guess it?<div><button id="new-game" class="btn btn-primary">New Game</button><br/>
+    	<!-- <button id="next-round" class="btn btn-primary">Next Round</button> --></div></h2>
+    
+    <!-- <div class="status">Score: <a class="scoreboard">0</a></div><br /> -->
+    
     <div class="guess-submit">
-        <span>Player 1</span>
-        <input type="text" id="add-guess-input">
-        <button type="button" id="add-guess-button">Submit Guess</button>
-        <ol id="p1guess">Your Guesses:</ol>
+        <span></span>
+        <input type="text" id="add-guess-input" placeholder="Enter a number. . . &#x23ce;">
+        <button type="button" id="add-guess-button" class="btn btn-primary">Submit Guess</button>
+        <ol id="p1guess"><u>Your Guesses</u></ol>
     </div>
+    <div class="youWin"></div>
     <footer>This is a game by Andrew Aluko</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,3 +1,10 @@
+body{
+	font-family: Optima;
+	margin: auto;
+	padding: 0;
+	max-width: auto;
+
+}
 #title-border{
 	border-bottom: solid black;
 }
@@ -10,28 +17,31 @@ h1{
 }
 .guess-submit {
     position: relative;
-    top: 100px;
-    left: 0px;
+  	text-align: center;
     font-family: Optima;
+    
+    padding: 25px;
 
 }
-button{
- font-family: Optima;
- font-size: 20px;
- cursor: pointer;
-}
 
-button:hover{
-	background-color: black;
-	color: white;
 
-}
+
+
 #new-game {
+    text-align: center;
     position: relative;
-    right: 650px;
-    max-width: 867px;
-}
+    
+  
+    cursor: pointer;
+    font-size: 20px;
 
+}
+#next-round{
+	
+	position: relative;
+	text-align: center;
+	bottom: 100px;
+}
 footer {
     text-align: center;
     position: fixed;
@@ -47,14 +57,24 @@ footer {
     font-variant: normal;
     font-weight: 700;
     line-height: 26.4px;
+    max-width: auto;
 
     
 }
 
-img{
-	max-width: 75px;
+
+h3{
+	position: absolute;
+	right: 400px;
 }
+.youWin{
+	/*position: absolute;*/
+	text-align: center;
+	padding: 50px;
 
+}
    
-
+#p1guess{
+	text-align: center;
+}
 
