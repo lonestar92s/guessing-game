@@ -1,24 +1,27 @@
 body{
-	font-family: Optima;
+	font-family:'Press Start 2P', cursive;
+	color: white;
+	background-color: black;
 	margin: auto;
 	padding: 0;
-	max-width: auto;
+	max-width: 800px;
 
 }
 #title-border{
-	border-bottom: solid black;
+	border-bottom: solid white;
 }
 
 .center {
     text-align: center;
 }
 h1{
-	font-family: Optima;
+	font-family: 'Press Start 2p';
+
 }
 .guess-submit {
     position: relative;
   	text-align: center;
-    font-family: Optima;
+    font-family: 'Press Start 2p';
     
     padding: 25px;
 
@@ -61,7 +64,9 @@ footer {
 
     
 }
-
+h2{
+	font-size: 20px;
+}
 
 h3{
 	position: absolute;
@@ -71,11 +76,24 @@ h3{
 	/*position: absolute;*/
 	text-align: center;
 	padding: 50px;
+	font-size: 40px;
 
 }
    
 #p1guess{
 	text-align: center;
 	list-style-position: inside;
+
+}
+#time{
+	position: fixed;
 }
 
+.flash{
+	text-align: center;
+}
+
+#tips {
+	position: relative;
+	top: 15px;
+}

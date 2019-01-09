@@ -1,7 +1,45 @@
+
+let youLose = "YOU LOSE. SELECT NEW GAME"
+//timer
+let timerStarted = false
+let time = 6;
+// let x = setTimeout(function(){ timer(); }, 1000);
+
+//used boolean to stop running timer function after first click
+let timer = function() {
+    console.log("1111111111111")
+    if(timerStarted === false){
+    	console.log("djhjkwdwgdwed")
+    	timerStarted = true
+    	x = setInterval(function() {
+        	time -= 1
+        	// document.getElementById("time").innerHTML = time + " seconds";
+        	if (time <= 0) {
+            document.getElementById("time").innerHTML = time + " seconds";
+            $('.guess-submit').replaceWith('<h1 class="flash">' + youLose + '</h1>');
+            	timerStarted = false 
+            	stopTimer();
+        	}else{
+        		document.getElementById("time").innerHTML = time + " seconds";
+        	}    
+    	}, 1000)
+	}
+
+}
+
+let stopTimer = function() {
+    clearTimeout(x)
+}
+
+
+
+
+
+
 //init
 $(document).ready(function() {
 
-
+	// $(".guess-submit").hide();
     $("#correct").hide();
     $('#next-round').hide();
     //reset funcion
@@ -47,6 +85,8 @@ $(document).ready(function() {
     //This reloads the game
     $('#new-game').click(function() {
         location.reload()
+
+	$(".guess-submit").show();
     });
 
 
@@ -60,6 +100,7 @@ $(document).ready(function() {
     //guess button
 
     $('#add-guess-button').click(function() {
+       timer();
         let guess = $('#add-guess-input').val()
         let correct = "Correct!"
         let tooLow = "Too low!"
@@ -92,6 +133,7 @@ $(document).ready(function() {
         }
 
         if (player.remainingGuesses === 0) {
+            
             alert("Game Over")
             location.reload()
         }
