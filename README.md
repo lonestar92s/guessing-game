@@ -1,7 +1,7 @@
 
 Guessing game
 
-- 2 players
+- 1 player
 - Random number generated between 1-10 (cards) hidden
 - Player 1 selects number then Player 2 selects number
 - if Player 1 pick equals the random number, player 1 gets one point
