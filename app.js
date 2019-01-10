@@ -1,10 +1,10 @@
 
 
 
-let youLose = "YOU LOSE. SELECT NEW GAME"
+let youLose = "YOU LOSE. SELECT NEW GAME."
 //timer
 let timerStarted = false
-let time = 61;
+let time = 6;
 // let x = setTimeout(function(){ timer(); }, 1000);
 
 //pause game button
@@ -20,8 +20,12 @@ $('#pause').click(function() {
 
     });
 });
-
-
+//start screen
+ $("#start-game").click(function () {
+        $('#start-game').hide();
+        $('#game-screen').css('display', 'block')
+        
+    });
 
 
 
@@ -105,10 +109,10 @@ $("#next-round").click(function() {
 //guess button
 
 $('#add-guess-button').click(function() {
-
+	timer();
     $("#title-border").css('animation-play-state', 'paused')
     // $("title-border.animation").remove()
-    timer();
+    
     let guess = $('#add-guess-input').val()
     let correct = "Correct!"
     let tooLow = "Too low!"
@@ -123,7 +127,7 @@ $('#add-guess-button').click(function() {
     if (Number(guess) === x) {
         player.score += 1
         $(".scoreboard").replaceWith('<a class="scoreboard">' + player.score + '</a>')
-        $(".youWin").append("My number was " + guess + ", you win!")
+        $(".youWin").append("My number was " + guess + ", you win! Not too shabby.")
         $("#p1guess").append('<li>' + youMatched + '</li>')
         stopTimer()
         
@@ -140,8 +144,7 @@ $('#add-guess-button').click(function() {
     }
     if (player.remainingGuesses === 0) {
 
-        alert("Game Over")
-        location.reload()
+        $('.guess-submit').replaceWith('<h1 class="flash">' + youLose + '</h1>');
     }
 })
 

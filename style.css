@@ -5,13 +5,23 @@ body{
 	margin: auto;
 	padding: 0;
 	max-width: 800px;
+	background-image: url('https://thumbs.gfycat.com/IndelibleJoyfulFowl-size_restricted.gif');
 
 }
 #title-border{
 	border-bottom: solid white;
 }
-#title-border{
+
+.center {
+    text-align: center;
+}
+
+
+#splash-screen{
   animation: blinker 1s linear 1s;
+  position: relative;
+  
+
   
 }
 
@@ -20,9 +30,10 @@ body{
     opacity: 0;
   }
 }
-.center {
-    text-align: center;
-}
+
+
+
+
 h1{
 	font-family: 'Press Start 2p';
 	background: -webkit-linear-gradient(#ff0000, #fffc00);
@@ -35,17 +46,22 @@ button{
 	background: -webkit-linear-gradient(#ff0000, #fffc00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-	
+
 }
 .guess-submit {
     position: relative;
   	text-align: center;
     font-family: 'Press Start 2p';
     
-    padding: 25px;
+    padding: 30px;
 
 }
 
+#start-game{
+  font-size: 30px;
+
+  
+}
 
 
 
@@ -96,7 +112,7 @@ h3{
 	/*position: absolute;*/
 	text-align: center;
 	padding: 50px;
-	font-size: 40px;
+	font-size: 30px;
 
 }
    
@@ -107,10 +123,19 @@ h3{
 }
 
 .flash{
-	text-align: center;
-	padding: 15px;
+  animation: blinker 1s linear infinite;
+  position: relative;
+  margin-top: 30px;
+  
+  text-align: center;
+  
 }
 
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 #pause {
 	position: relative;
 	top: 15px;
@@ -143,4 +168,7 @@ h3{
 	width: 400px;
 	
 	position: fixed;
+}
+#game-screen{
+	display: none;
 }
