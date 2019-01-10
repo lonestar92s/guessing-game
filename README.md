@@ -2,9 +2,8 @@
 Guessing game
 
 - 1 player
-- Random number generated between 1-10 (cards) hidden
-- Player 1 selects number then Player 2 selects number
-- if Player 1 pick equals the random number, player 1 gets one point
-- if Player 2 pick equals the random number, player 2 gets one point
+- Random number generated between 1-100 hidden
+- 60 seconds to find the number or game over
+- hints given if you're too high or too low
+- 10 guesses total or game over
 
-- First player to 5 points wins game
