@@ -1,0 +1,31 @@
+#parent{
+	height: 100px;
+	display: flex;
+	background-color: orange;
+}
+
+#child{
+	height: 100px;
+	width: 100px;
+	background-color: green;
+}
+
+#child-2{
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+}
+
+
+#sword{
+    bottom:15%;
+    position:absolute;
+    -webkit-animation:linear infinite alternate;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 10s;
+}     
+@-webkit-keyframes run {
+    0% { left: 0;}
+    50%{ left : 100%;}
+    100%{ left: 0;}
+}
