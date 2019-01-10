@@ -12,14 +12,14 @@
 <body>
     <header class="center" id="title-border"><h1>Guessing Game</h1>
     </header>
-    <h2 class="center" id="number-selection">I am thinking of a number between 1 and 100. Can you guess it before time runs out?<div id="buttons"><button id="new-game" class="btn btn-primary">New Game</button><br/>
+  <h2 class="center" id="number-selection">I am thinking of a number between 1 and 100. Can you guess it before time runs out?
+    	<div id="buttons"><button id="new-game" class="btn btn-primary">New Game</button>
     	
-    	<button id="pause" class="btn btn-primary">Pause</button>
-
-    	<button id="next-round" class="btn btn-primary">Next Round</button></div></h2>
+	
+    
     <div id="parent">
         <div class="guess-submit">
-            <input type="text" id="add-guess-input" placeholder="Enter a number. . . &#x23ce;">
+            <input type="text" autocomplete="off" id="add-guess-input" placeholder="Enter a number. . . &#x23ce;">
             <button type="button" id="add-guess-button" class="btn btn-primary">Submit Guess</button>
             <ol id="p1guess"><u>Your Guesses</u></ol>
             <div id="time-left">Time Left:<a id="time"></a>

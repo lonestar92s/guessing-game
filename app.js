@@ -1,3 +1,6 @@
+
+
+
 let youLose = "YOU LOSE. SELECT NEW GAME"
 //timer
 let timerStarted = false
@@ -10,26 +13,18 @@ $('#pause').click(function() {
     $('#pause').replaceWith('<button id="resume" class="btn btn-primary">Resume</button>')
     stopTimer()
     $('#resume').click(function() {
-    $('.guess-submit').show()
-    $('#resume').replaceWith('<button id="pause" class="btn btn-primary">Pause</button>')
-    
-     timer()
-     
+        $('.guess-submit').show()
+        $('#resume').replaceWith('<button id="pause" class="btn btn-primary">Pause</button>')
 
+        timer()
 
-});
+    });
 });
 
-//resume game button
-
-// $('#resume').click(function() {
-//     $('.guess-submit').show()
-//     // $('#resume').replaceWith('<button id="pause" class="btn btn-primary">Pause</button>')
-    
-//     // timer()
 
 
-// });
+
+
 
 //used boolean to stop running timer function after first click
 let timer = function() {
@@ -58,120 +53,99 @@ let stopTimer = function() {
 }
 
 
-
-
-
-
 //init
 $(document).ready(function() {
 
 
-    $("#correct").hide();
-    $('#next-round').hide();
-    //reset funcion
-    //     let resetGame = function() {
+//levels of difficulty (easy, medium, hard)
+let easyRandomNumber = function() {
 
-    //         $("#p1guess").empty()
-    //         $(".youWin").empty()
-    //         $("#correct").hide();
-    //         $("#number-selection").replaceWith('<h2 class="center" id="number-selection">Now I am thinking of a number between 1 and 100. Can you guess it?<div><button id="new-game" class="btn btn-primary">New Game</button><br/><button id="next-round" class="btn btn-primary">Next Round</button></div></h2>')
+    return Math.floor(Math.random() * 100) + 1
 
-    // }
+}
+
+let x = easyRandomNumber()
+console.log(x)
 
 
-    //This will generate a random number between 1 and 100
-
-
-    let easyRandomNumber = function() {
-
-        return Math.floor(Math.random() * 100) + 1
-
-    }
-
-    let x = easyRandomNumber()
-    console.log(x)
+$("#correct").hide();
+$('#next-round').hide();
 
 
 
-    class Players {
-        constructor(name) {
-            this.name = name;
-            this.score = 0;
-            this.remainingGuesses = 10;
-
-        }
+class Players {
+    constructor(name) {
+        this.name = name;
+        this.score = 0;
+        this.remainingGuesses = 10;
 
     }
 
-    let player = new Players("Player 1")
-    // let player2 = new Players("Player 2")
+}
 
-    //This reloads the game
-    $('#new-game').click(function() {
-        location.reload()
+let player = new Players("Player 1")
+// let player2 = new Players("Player 2")
 
-        $(".guess-submit").show();
-    });
+//This reloads the game
+$('#new-game').click(function() {
+    location.reload()
 
-
-
-    //next round button
-    $("#next-round").click(function() {
-        resetGame()
-        console.log(y)
-    })
-
-
-
-
-
-
-
-    //guess button
-
-    $('#add-guess-button').click(function() {
-
-        $("#title-border").css('animation-play-state', 'paused')
-        // $("title-border.animation").remove()
-        timer();
-        let guess = $('#add-guess-input').val()
-        let correct = "Correct!"
-        let tooLow = "Too low!"
-        let tooHigh = "Too High"
-        let youMatched = "Match!"
-        console.log(guess)
-        let p1Guess = $('<div id="p1guess">' + guess + '</div>')
-        $("#add-guess-input").val("")
-
-        //scoreboard
-
-        if (Number(guess) === x) {
-            player.score += 1
-            $(".scoreboard").replaceWith('<a class="scoreboard">' + player.score + '</a>')
-            $(".youWin").append("My number was " + guess + ", you win!")
-            $("#p1guess").append('<li>' + youMatched + '</li>')
-            stopTimer()
-            let imageGrow = 1;
-            $('#image').css('transform', 'scale()', `${imageGrow}`)
-            imageGrow += 1
-            $("#time-left").hide()
-            $("#correct").show();
-            // $("#next-round").show();
-        } else if (Number(guess) <= x) {
-            $("#p1guess").append('<li>' + tooLow, guess + '</li>')
-            player.remainingGuesses -= 1
-        } else if (Number(guess) >= x) {
-            $("#p1guess").append('<li>' + tooHigh, guess + '</li>')
-            player.remainingGuesses -= 1;
-        }
-        if (player.remainingGuesses === 0) {
-
-            alert("Game Over")
-            location.reload()
-        }
-
-
-    })
-
-
+    $(".guess-submit").show();
 });
+
+
+
+//next round button
+$("#next-round").click(function() {
+    resetGame()
+    console.log(y)
+})
+
+
+//guess button
+
+$('#add-guess-button').click(function() {
+
+    $("#title-border").css('animation-play-state', 'paused')
+    // $("title-border.animation").remove()
+    timer();
+    let guess = $('#add-guess-input').val()
+    let correct = "Correct!"
+    let tooLow = "Too low!"
+    let tooHigh = "Too High"
+    let youMatched = "Match!"
+    console.log(guess)
+    let p1Guess = $('<div id="p1guess">' + guess + '</div>')
+    $("#add-guess-input").val("")
+
+    //scoreboard
+
+    if (Number(guess) === x) {
+        player.score += 1
+        $(".scoreboard").replaceWith('<a class="scoreboard">' + player.score + '</a>')
+        $(".youWin").append("My number was " + guess + ", you win!")
+        $("#p1guess").append('<li>' + youMatched + '</li>')
+        stopTimer()
+        
+        
+        $("#time-left").hide()
+        $("#correct").show();
+        // $("#next-round").show();
+    } else if (Number(guess) <= x) {
+        $("#p1guess").append('<li>' + tooLow, guess + '</li>')
+        player.remainingGuesses -= 1
+    } else if (Number(guess) >= x) {
+        $("#p1guess").append('<li>' + tooHigh, guess + '</li>')
+        player.remainingGuesses -= 1;
+    }
+    if (player.remainingGuesses === 0) {
+
+        alert("Game Over")
+        location.reload()
+    }
+})
+
+
+
+
+ });
