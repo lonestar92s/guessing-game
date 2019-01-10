@@ -4,7 +4,7 @@
 let youLose = "YOU LOSE. SELECT NEW GAME."
 //timer
 let timerStarted = false
-let time = 6;
+let time = 60;
 // let x = setTimeout(function(){ timer(); }, 1000);
 
 //pause game button
@@ -110,15 +110,15 @@ $("#next-round").click(function() {
 
 $('#add-guess-button').click(function() {
 	timer();
-    $("#title-border").css('animation-play-state', 'paused')
-    // $("title-border.animation").remove()
     
-    let guess = $('#add-guess-input').val()
+    //variables
     let correct = "Correct!"
     let tooLow = "Too low!"
     let tooHigh = "Too High"
     let youMatched = "Match!"
-    console.log(guess)
+    //shows guesses on screen
+    let guess = $('#add-guess-input').val()
+    // console.log(guess)
     let p1Guess = $('<div id="p1guess">' + guess + '</div>')
     $("#add-guess-input").val("")
 
