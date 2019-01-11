@@ -1,6 +1,6 @@
 body{
 	font-family:'Press Start 2P', cursive;
-	/*color: white;*/
+	color: white;
 	background-color: black;
 	margin: auto;
 	padding: 0;
@@ -9,8 +9,10 @@ body{
 
 }
 #title-border{
-	border-bottom: solid white;
-	
+	/*border-bottom: solid white;*/
+	background: -webkit-linear-gradient(#ff0000, #fffc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 	
 
@@ -43,16 +45,17 @@ body{
 h1{
 	font-family: 'Press Start 2p';
 	background: -webkit-linear-gradient(#ff0000, #fffc00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-	color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	
 
 
 }
 button{
 	background: -webkit-linear-gradient(#ff0000, #fffc00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 
 }
 .guess-submit {
@@ -66,6 +69,7 @@ button{
 
 #start-game{
   font-size: 30px;
+
 
   
 }
@@ -109,7 +113,6 @@ footer {
 }
 h2{
 	font-size: 20px;
-	color: white;
 }
 
 h3{
@@ -121,7 +124,6 @@ h3{
 	text-align: center;
 	padding: 50px;
 	font-size: 30px;
-	color: #25bb42;
 
 }
    
@@ -135,7 +137,6 @@ h3{
   animation: blinker 1s linear infinite;
   position: relative;
   margin-top: 30px;
-  color: red;
   
   text-align: center;
   

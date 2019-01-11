@@ -145,6 +145,7 @@ $('#add-guess-button').click(function() {
     if (player.remainingGuesses === 0) {
 
         $('.guess-submit').replaceWith('<h1 class="flash">' + youLose + '</h1>');
+        stopTimer()
     }
 })
 
