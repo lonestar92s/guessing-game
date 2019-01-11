@@ -1,20 +1,21 @@
-body{
-	font-family:'Press Start 2P', cursive;
-	color: white;
-	background-color: black;
-	margin: auto;
-	padding: 0;
-	max-width: 800px;
-	background-image: url('https://media.giphy.com/media/dXoQnoUUSUIvK/200.gif');
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: black;
+    margin: auto;
+    padding: 0;
+    max-width: 800px;
+    background-image: url('https://media.giphy.com/media/dXoQnoUUSUIvK/200.gif');
 
 }
-#title-border{
-	border-bottom: solid white;
-	background: -webkit-linear-gradient(#ff0000, #fffc00);
+
+#title-border {
+    border-bottom: solid white;
+    background: -webkit-linear-gradient(#ff0000, #fffc00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-	
+
 
 }
 
@@ -25,53 +26,56 @@ body{
 }
 
 
-#splash-screen{
-  animation: blinker 1s linear 1s;
-  position: relative;
-  
+#splash-screen {
+    animation: blinker 1s linear 1s;
+    position: relative;
 
-  
+
+
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+    50% {
+        opacity: 0;
+    }
 }
 
 
 
 
-h1{
-	font-family: 'Press Start 2p';
-	background: -webkit-linear-gradient(#ff0000, #fffc00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-	
-
-
-}
-button{
-	background: -webkit-linear-gradient(#ff0000, #fffc00);
+h1 {
+    font-family: 'Press Start 2p';
+    background: -webkit-linear-gradient(#ff0000, #fffc00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 
+
 }
+
+button {
+    background: -webkit-linear-gradient(#ff0000, #fffc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
 .guess-submit {
     position: relative;
-  	text-align: center;
+    text-align: center;
     font-family: 'Press Start 2p';
-    
+
     padding: 30px;
 
 }
 
-#start-game{
-  font-size: 30px;
+#start-game {
+    font-size: 20px;
+    margin-bottom: 15px;
 
 
-  
+
 }
 
 
@@ -79,18 +83,20 @@ button{
 #new-game {
     text-align: center;
     bottom: 100px;
-    
-  
+
+
     cursor: pointer;
     font-size: 20px;
 
 }
-#next-round{
-	
-	position: relative;
-	text-align: center;
-	bottom: 100px;
+
+#next-round {
+
+    position: relative;
+    text-align: center;
+    bottom: 100px;
 }
+
 footer {
     text-align: center;
     position: fixed;
@@ -109,80 +115,94 @@ footer {
     max-width: auto;
     color: black;
 
-    
-}
-h2{
-	font-size: 20px;
-}
-
-h3{
-	position: absolute;
-	right: 400px;
-}
-.youWin{
-	/*position: absolute;*/
-	text-align: center;
-	padding: 50px;
-	font-size: 30px;
-
-}
-   
-#p1guess{
-	text-align: center;
-	list-style-position: inside;
 
 }
 
-.flash{
-  animation: blinker 1s linear infinite;
-  position: relative;
-  margin-top: 30px;
-  
-  text-align: center;
-  
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    position: absolute;
+    right: 400px;
+}
+
+.youWin {
+    /*position: absolute;*/
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+    background: -webkit-linear-gradient(#ff0000, #fffc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: blinker 1s linear infinite;
+
+}
+
+#p1guess {
+    text-align: center;
+    list-style-position: inside;
+
+}
+
+.flash {
+    animation: blinker 1s linear infinite;
+    position: relative;
+    margin-top: 30px;
+
+    text-align: center;
+
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+    50% {
+        opacity: 0;
+    }
 }
+
 #pause {
-	position: relative;
-	top: 15px;
-}
-#resume{
-	position: relative;
-	top: 15px;
+    position: relative;
+    top: 15px;
 }
 
-#buttons{
-	padding: 15px;
+#resume {
+    position: relative;
+    top: 15px;
 }
 
-#image{
-	width: 50%;
-	transition: 1s;
-	transform: scale(1);
+#buttons {
+    padding: 15px;
 }
 
-#parent{
-	/*display: flex;*/
-	text-align: center;
+#image {
+    width: 50%;
+    transition: 1s;
+    transform: scale(1);
 }
 
-#time{
-	position: fixed;
-	
+#parent {
+    /*display: flex;*/
+    text-align: center;
 }
-#time-left{
-	width: 400px;
-	
-	position: fixed;
+
+#time {
+    position: fixed;
+
 }
-#game-screen{
-	display: none;
+
+#time-left {
+    width: 400px;
+
+    position: fixed;
 }
-#number-selection{
-  margin-top: 30px;
+
+#game-screen {
+    display: none;
+}
+
+#number-selection {
+    margin-top: 30px;
+}
+li{
+  padding: 10px;
 }
