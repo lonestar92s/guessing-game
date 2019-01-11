@@ -9,7 +9,7 @@ body{
 
 }
 #title-border{
-	/*border-bottom: solid white;*/
+	border-bottom: solid white;
 	background: -webkit-linear-gradient(#ff0000, #fffc00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -55,7 +55,7 @@ button{
 	background: -webkit-linear-gradient(#ff0000, #fffc00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
 
 }
 .guess-submit {
@@ -182,4 +182,7 @@ h3{
 }
 #game-screen{
 	display: none;
+}
+#number-selection{
+  margin-top: 30px;
 }
