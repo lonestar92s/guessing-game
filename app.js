@@ -11,7 +11,7 @@ $("#start-game").click(function() {
 
 
 
-//timer
+//timer 
 let timerStarted = false
 let time = 60;
 
@@ -48,12 +48,12 @@ $(document).ready(function() {
 
     //Level of difficulty
     let easyRandomNumber = function() {
-
         return Math.floor(Math.random() * 100) + 1
-
     }
 
     let x = easyRandomNumber()
+
+
 
     //Make sure random number and guessed number work correctly
     console.log(x)
@@ -69,10 +69,10 @@ $(document).ready(function() {
             this.name = name;
             this.score = 0;
             this.remainingGuesses = 10;
-
         }
-
     }
+
+
 
     let player = new Players("Player 1")
 
@@ -102,7 +102,7 @@ $(document).ready(function() {
         $("#add-guess-input").val("")
 
 
-        //scoreboard with jQuery
+        //scoreboard with jQuery // x = random number
 
         if (Number(guess) === x) {
             player.score += 1
@@ -110,8 +110,6 @@ $(document).ready(function() {
             $(".youWin").append("My number was " + guess + ", you win! Not too shabby.")
             $("#p1guess").append('<li>' + youMatched + '</li>')
             stopTimer()
-
-
             $("#time-left").hide()
             $("#correct").show();
 
@@ -129,11 +127,12 @@ $(document).ready(function() {
         }
     })
 
-
-
-
-
-
-
-
 });
+
+
+
+
+
+
+
+
