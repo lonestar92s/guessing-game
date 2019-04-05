@@ -26,7 +26,7 @@ let timer = function() {
 
             if (time <= 0) {
                 document.getElementById("time").innerHTML = time + " seconds";
-                $('.guess-submit').replaceWith('<h1 class="flash">' + youLose + '</h1>');
+                $('.guess-submit').replaceWith('<h1 class="flash">YOU LOSE. SELECT NEW GAME.</h1>');
                 timerStarted = false
                 stopTimer();
             } else {
